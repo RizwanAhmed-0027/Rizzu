@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chuddnjaan - Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>🎬 Chuddnjaan</h1>
+        <p>Admin Panel</p>
+    </div>
+
+    <div>
+        <span id="adminEmail" style="margin-right: 15px;"></span>
+
+        <button id="logoutBtn" class="btn btn-danger">
+            Logout
+        </button>
+
+        <a href="index.html" class="btn btn-primary">
+            ← Home
+        </a>
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- ========================= -->
+    <!-- ADMIN LOGIN -->
+    <!-- ========================= -->
+
+    <div id="loginSection" class="admin-section">
+
+        <div class="login-box">
+
+            <h2>🔐 Admin Login</h2>
+
+            <p>
+                कृपया अपने Admin Email और Password से Login करें
+            </p>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Admin Email"
+                    autocomplete="email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SIGNUP HIDDEN -->
+    <!-- ========================= -->
+
+    <div
+        id="signupSection"
+        class="admin-section"
+        style="display: none;"
+    >
+
+        <div class="login-box">
+
+            <h2>Admin Account</h2>
+
+            <p>
+                Admin account creation यहाँ से उपलब्ध नहीं है।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- ADMIN DASHBOARD -->
+    <!-- ========================= -->
+
+    <div
+        id="dashboardSection"
+        class="admin-section"
+        style="display: none;"
+    >
+
+        <div class="dashboard-header">
+
+            <h2>📊 Dashboard</h2>
+
+            <button
+                id="addVideoBtn"
+                class="btn btn-success"
+            >
+                ➕ नया वीडियो जोड़ें
+            </button>
+
+        </div>
+
+
+        <!-- VIDEO FORM -->
+
+        <div
+            id="videoForm"
+            class="video-form"
+            style="display: none;"
+        >
+
+            <h3 id="formTitle">
+                नया वीडियो जोड़ें
+            </h3>
+
+            <form id="videoFormElement">
+
+                <input
+                    type="hidden"
+                    id="videoId"
+                >
+
+                <input
+                    type="text"
+                    id="videoTitle"
+                    placeholder="वीडियो का Title *"
+                    required
+                >
+
+                <input
+                    type="url"
+                    id="flezenLink"
+                    placeholder="Flezen Video Share Link *"
+                    required
+                >
+
+                <input
+                    type="file"
+                    id="thumbnailFile"
+                    accept="image/*"
+        
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="छोटी Description (Optional)"
+                    rows="3"
+                ></textarea>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="saveVideoBtn"
+                    >
+                        💾 Save Video
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="cancelBtn"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- VIDEO LIST -->
+
+        <div
+            id="adminVideosList"
+            class="videos-grid"
+        >
+
+            <div class="loading">
+                ⏳ वीडियो लोड हो रहे हैं...
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- SUPABASE LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- ADMIN JAVASCRIPT -->
+<script src="admin.js"></script>
+
+</body>
+</html>
