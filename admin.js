@@ -1,10 +1,10 @@
 // ==========================================
-// CHUDDNJAAN - ADMIN PANEL
+// RIZWAN BADMASH - ADMIN PANEL
 // ==========================================
 
 // Supabase Configuration
-const SUPABASE_URL = 'https://cpsvdtjuxvaqubpnjuzy.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_rgDkg3rHV-Y_ps0iA3muLA_i-h3DfoQ';
+const SUPABASE_URL = 'https://xgswbttfgyhysavdnbwe.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_Ialg-HClzVhkwnmhmvNGIQ_y--rGGpF';
 
 const supabaseClient = supabase.createClient(
     SUPABASE_URL,
