@@ -1,5 +1,5 @@
 // ==========================================
-// CHUDDNJAAN - VIDEO LOADER
+// RIZWAN BADMASH - VIDEO LOADER
 // ==========================================
 
 const SUPABASE_URL = 'https://xgswbttfgyhysavdnbwe.supabase.co';
